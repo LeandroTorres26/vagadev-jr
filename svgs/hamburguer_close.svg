@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="22.092" height="22.092" viewBox="0 0 22.092 22.092">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+      }
+    </style>
+  </defs>
+  <g id="hamburguer_close" transform="translate(-1408.905 -1456.954)">
+    <path id="Caminho_1" data-name="Caminho 1" class="cls-1" d="M20.436,4.393,1.344,23.485a1.5,1.5,0,0,0,2.121,2.121L22.558,6.515a1.5,1.5,0,0,0-2.121-2.121Z" transform="translate(1408 1453)"/>
+    <path id="Caminho_2" data-name="Caminho 2" class="cls-1" d="M25.606,20.436,6.514,1.344A1.5,1.5,0,0,0,4.393,3.466L23.485,22.558a1.5,1.5,0,1,0,2.121-2.121Z" transform="translate(1404.951 1456.049)"/>
+  </g>
+</svg>

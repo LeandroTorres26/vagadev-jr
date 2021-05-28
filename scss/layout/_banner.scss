@@ -1,0 +1,58 @@
+.section-jogos {
+  display: grid;
+  gap: 1em;
+}
+
+.banner {
+  display: grid;
+  grid-template-rows: 1fr auto;
+  &__titulo {
+    padding: 0.5em 1em;
+    background-color: $azul;
+    border-left: 0.6em solid $azul-escuro;
+    border-radius: 0 0 5px 5px;
+    position: relative;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 1em;
+
+    span {
+      color: $azul-escuro;
+      font-weight: 700;
+    }
+
+    span:nth-child(2) {
+      position: relative;
+      &::after {
+        content: "";
+        position: absolute;
+        top: 0.5em;
+        background-color: $azul-escuro;
+        width: 100%;
+        height: 2px;
+      }
+    }
+  }
+}
+
+// - Tablet -------------------
+
+@include tablet() {
+  .section-jogos {
+    grid-template-columns: 1fr 1fr;
+    margin-top: 1em;
+  }
+}
+
+// - Desktop ------------------
+
+@include desktop() {
+  .section-jogos {
+    grid-template-columns: 1fr 1fr;
+    position: relative;
+    margin-bottom: -10em;
+    transform: translateY(-10em);
+    padding: 0 10em;
+    z-index: 1;
+  }
+}

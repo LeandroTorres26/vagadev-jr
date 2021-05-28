@@ -1,0 +1,182 @@
+// - Jogo em destaque ------------------------------------------
+
+.destaque {
+  position: relative;
+  &__img {
+    height: 80vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+}
+
+.destaque:nth-child(even) {
+  .destaque__img {
+    background-image: url("../img/principal_banner_mobile.jpg");
+    background-position: center;
+  }
+}
+.destaque:nth-child(odd) {
+  .destaque__img {
+    background-image: url("../img/principal_banner_mobile_02.jpg");
+    background-position: top;
+  }
+}
+
+.destaque__info {
+  background-color: rgba(#000, 0.65);
+  padding: 0;
+  padding: 1.5em 2em;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  text-align: right;
+  min-height: 13em;
+  .info__titulo {
+    margin-bottom: 0.3em;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+  }
+  .info__preco {
+    color: $azul;
+    font-size: 2.5rem;
+    display: flex;
+    justify-content: flex-end;
+    span {
+      font-size: 1.6rem;
+      display: block;
+      transform: translate(5px, -3px);
+    }
+  }
+  .info__desc {
+    line-height: 1.6;
+    font-size: 0.9rem;
+    font-weight: 400;
+    max-width: 60ch;
+    margin-right: 0;
+    margin-left: auto;
+  }
+}
+
+.carousel__nav {
+  background-color: $azul;
+  border-radius: 0em 0 0em 0.8em;
+  display: grid;
+  grid-template-columns: 1fr 40%;
+  & > span {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 1em;
+  }
+  span:nth-of-type(2) {
+    display: none;
+  }
+
+  .carousel__menu {
+    background-color: $azul-escuro;
+    display: flex;
+    justify-content: space-around;
+    padding: 1em 0;
+
+    &--setas {
+      display: flex;
+      gap: 2em;
+    }
+  }
+}
+
+// - Desktop ---------------------------
+
+@include desktop() {
+  .destaque__img {
+    background-color: rgba(#000, 0.5);
+    background-blend-mode: darken;
+  }
+
+  .destaque:nth-child(even) {
+    .destaque__img {
+      background-image: url("../img/principal_banner_desktop.jpg");
+      background-position: center;
+    }
+  }
+  .destaque:nth-child(odd) {
+    .destaque__img {
+      background-image: url("../img/principal_banner_desktop_02.jpg");
+      background-position: top left;
+    }
+  }
+
+  .destaque__info {
+    background-color: transparent;
+    top: 10em;
+    margin-right: 13em;
+    margin-left: auto;
+    text-align: right;
+    width: 45ch;
+    .info__titulo {
+      margin-bottom: 0.5em;
+      font-size: 2rem;
+    }
+    .info__preco {
+      font-size: 2.7rem;
+      margin-bottom: 0.5em;
+      span {
+        font-size: 1.8rem;
+      }
+    }
+    .info__desc {
+      line-height: 1.8;
+      font-size: 0.9rem;
+    }
+  }
+
+  .carousel__nav {
+    border-radius: 0em 0 0em 0.8em;
+    position: absolute;
+    right: 0;
+    top: 15%;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto 5em auto;
+    gap: 1em;
+    & > span:nth-of-type(1) {
+      display: grid;
+      padding: 1em 1em 0 1em;
+      font-size: 1rem;
+      font-weight: 400;
+      text-transform: uppercase;
+      writing-mode: vertical-rl;
+      text-orientation: mixed;
+      letter-spacing: 0.1em;
+      position: relative;
+    }
+    span:nth-of-type(2) {
+      position: relative;
+      display: inline-block;
+    }
+    span:nth-of-type(2)::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 1.5em;
+      background-color: #fff;
+      width: 2px;
+      height: 5em;
+    }
+
+    .carousel__menu {
+      background-color: $azul-escuro;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+      padding: 1em 0;
+      gap: 1em;
+
+      &--setas {
+        display: flex;
+        gap: 1em;
+      }
+    }
+  }
+}
