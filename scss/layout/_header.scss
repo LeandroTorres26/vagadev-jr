@@ -185,7 +185,7 @@ header {
     left: 8em;
     top: 5em;
     max-width: 30em;
-    max-height: 13em;
+    max-height: 11em;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     justify-content: center;
@@ -193,6 +193,7 @@ header {
     border: 2px solid $azul;
     border-radius: 5px;
     transform: translate(0, -100%);
+    padding: 1em;
     &::before {
       content: "";
       position: absolute;
@@ -207,10 +208,19 @@ header {
       position: absolute;
       border-right: 0.8em solid$azul;
       border-bottom: 0.8em solid$azul;
-      width: 29em;
+      width: 31em;
       height: 12em;
       border-radius: 5px;
       transform: translate(1em, 1em);
+    }
+    &__genero {
+      width: 100%;
+      z-index: 5;
+      &:not(:first-child) {
+        margin-top: 0;
+        padding-top: 0;
+        border-top: none;
+      }
     }
     &__item {
       font-size: 0.9rem;
