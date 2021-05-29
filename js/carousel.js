@@ -55,21 +55,4 @@ $(document).ready(function(){
     $(window).on('resize orientationChange', function(event) {
         $('.carousel-produtos').slick('reinit');
     });
-    // $(window).on('resize', function(){
-    //     if ($(window).width() < 1050) {
-    //         $('.carousel-produtos').slick({
-    //             dots: false,
-    //             infinite: true,
-    //             speed: 200,
-    //             slidesToShow: 1,
-    //             slidesToScroll: 1,
-    //             autoplay: true,
-    //             autoplaySpeed: 5000,
-    //             prevArrow: $('.produtos_esquerda'),
-    //             nextArrow: $('.produtos_direita')
-    //         });
-    //     } else {
-    //         $('.carousel-produtos').filter('.slick-initialized').slick('unslick');
-    //     }
-    // });
 });
